@@ -1,0 +1,19 @@
+{% extends "layout/base.html" %}
+
+
+{% block title %}
+    Forum Slim
+{% endblock %}
+
+{% block content %}
+    <h2>
+        Ini Halaman Forum
+    </h2>
+
+    {% for data in forum%}
+        *
+        {{ data.title }}
+    {% else %}
+        Data Not Found
+    {% endfor  %}
+{% endblock %}

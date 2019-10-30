@@ -1,0 +1,14 @@
+{% extends "layout/base.html" %}
+
+
+{% block title %}
+    Home Slim
+{% endblock %}
+
+{% block content %}
+    <h2>
+        Ini Halaman Home
+    </h2>
+    <a href="{{ path_for('single', {'title' : 'hallo'}) }}">
+        Ke forum</a>
+{% endblock %}

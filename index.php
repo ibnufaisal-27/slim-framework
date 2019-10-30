@@ -63,11 +63,11 @@ $app->get('/', function ($request, $response) {
 
 
 $app->get('/forum', function ($request, $response, $args) {
-    var_dump($this->db->table('news')->get());
+    $datas = $this->db->table('news')->get();
 
-    // $datas = $this->db->query("SELECT * FROM news")->fetchAll(PDO::FETCH_OBJ);
-    die();
-    return $this->view->render($response, 'forum.twig', []);
+    return $this->view->render($response, 'forum.twig', [
+        'forum' => $datas
+    ]);
 })->setName('single');
 
 
